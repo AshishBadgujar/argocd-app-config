@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: client-deployment
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       component: web
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: dkrashi/demo-app:latest
+          image: dkrashi/demo-app:1.0
           ports:
             - containerPort: 80
 ---
